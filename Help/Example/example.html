@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>EXPO 360</title>
+     
+     <link href="css/fonts.css" rel="stylesheet" type="text/css" />
+     
+     <script type="text/javascript" src="js/libraries/jquery.js"></script>
+     <script type="text/javascript" src="js/libraries/jquery.mobile.vmouse.js"></script> 
+     <script type="text/javascript" src="js/libraries/jquery.mousewheel.min.js"></script> 
+     
+     <script type="text/javascript" src="js/pngFixer.js"></script>
+     <script type="text/javascript" src="js/buttons.js"></script>
+     
+     <script type="text/javascript" src="js/Expo360.js"></script>
+     
+     <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			var expo = new Expo360({xml:"configuration/settings.xml", where:"#viewer"});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="viewer"></div>
+</body>
+
+</html>

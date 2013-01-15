@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head> 
+          <title>Expo 360&#176; - The future of showing products online</title>
+          <link href="main.css" rel="stylesheet" type="text/css" />
+          <link href="hotspot-pages.css" rel="stylesheet" type="text/css" />
+          <link href="css/fonts.css" rel="stylesheet" type="text/css" />
+          
+          <script type="text/javascript" src="js/libraries/jquery.js"></script>
+          <script type="text/javascript" src="js/libraries/jquery.mobile.vmouse.js"></script> 
+          <script type="text/javascript" src="js/libraries/jquery.mousewheel.min.js"></script> 
+          
+          <script type="text/javascript" src="js/pngFixer.js"></script>
+          <script type="text/javascript" src="js/buttons.js"></script>
+          
+          <script type="text/javascript" src="js/Expo360.js"></script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				var expo = new Expo360({xml:"configuration/settings.xml", where:"#viewer"});
+				
+				$("#goFront").click(function(){
+					expo.goTo(0);
+					return false;
+				});
+			});
+		</script>
+     </head>  
+	<body>
+     	<!-- HEADER -->
+     	<div class="header">
+          	<div class="center">
+          		<h1>EXPO<span>360&#176;</span></h1>
+                    <div class="menu">
+                    	<a class ="active" href="index.html">Example 1</a>
+                         <p>|</p>
+                    	<a href="example2.html">Example 2</a>
+                         <p>|</p>
+                    	<a href="example3.html">Example 3</a>
+                         <p>|</p>
+                    	<a href="example4.html">Example 4</a>
+                    </div>
+               </div>
+          </div>
+          <div class="center">
+               <div class="sep30"></div>
+               
+               <div class="all-wraper">
+               	<div class="viewer-holder">
+                    	<div id="viewer" style="position:relative; overflow:hidden;"></div>
+                    </div>
+                    <div class="right-wraper">
+          			<h1 class="large">EXPO<span>360&#176;</span></h1>
+          			<h1 class="smaller">The future of showing products online</h1>
+                         <div class="sep10"></div>
+                         <div class="sep5"></div>
+                         <h2>Some features:</h2>
+                         <div class="sep10"></div>
+                         <ul>
+                              <li>Smooth and attractive 360&#176; view of your products</li>
+                              <li>Zoom functionality to view details</li>
+                              <li>Three kinds of hotspots</li>
+                              <li>Autoplay and playback slider</li>
+                              <li>Custom grabhand cursor</li>
+                              <li>Configuration using XML with over 100 settings</li>
+                              <li>External callbacks, for example: show <a href="#" id="goFront">front</a>.</li>
+                         </ul>
+                         <div class="sep30"></div>
+                         <img src="images/preview/mobile.jpg"  style="float:left;margin-left:5px;"/>
+                         <h3 style="position:relative; left:12px; top:34px"><span>Works on mobile devices</span></h3>
+                         <h3 style="position:relative; left:12px; top:34px">(iPhone / iPad / android)</h3>
+                   </div>
+              </div>
+              <div class="sep30"></div>
+               <div class="all-wraper">
+                    <div class="wraper">
+                         <div class="sep5"></div>
+                         <h2 style="padding-left:5px;">Present your products in 360&#176;</h2>
+                         <div class="sep20"></div>
+                         <div class="col1">
+                              <p class="info">Taking the product showcase on your website to the next level. By using Expo360&#176;, your customer not only gets a better look and feel of the product that you are presenting, it also is a cool feature on your website that will blow everyone away!</p>
+                              <div class="sep10"></div>
+                              <p class="info">Expo360&#176; offers over 100 predefined XML settings to create custom interfaces matching your website's identity. You can insert a dynamic number of images, set a dynamic width and height of the window and add as many hotspots as you want. </p>
+                         </div>
+                         <div class="col2">
+                              <p class="info">12 different controls allow you to add all kinds of functionality varying from playback and zoom to adding external links and play-pause options.</p>
+                              <div class="sep10"></div>
+                              <p class="info">To make it even more attractive, Expo360&#176; is compatible with smartphones and touchpads, ensuring that you will reach your complete audience!</p>
+                              <div class="sep10"></div>
+                              <a href = "#"><img src="images/preview/buy_btn.png"  style="padding-left:5px;"/></a>
+                         </div>
+                    </div>
+                    <div class="right-wraper">
+                         <div class="sep5"></div>
+                         <h2 style="padding-left:5px;">Check out these other examples:</h2>
+                         <div class="sep20"></div>
+                         <a href = "example2.html" class="item">
+                             <div style="float:left"><img src="images/preview/thumb2.jpg" /></div>
+                              <div class="number" style="float:left">2</div>
+                              <h2 class="white" style="margin-top:10px">Floating controls</h2>
+                              <p>Nunc pulvinar fermentum.</p>
+                         </a>
+                         <div class="sep5"></div>
+                         <a href = "example3.html" class="item">
+                             <div style="float:left"> <img src="images/preview/thumb3.jpg" /></div>
+                              <div class="number" style="float:left">3</div>
+                              <h2 class="white" style="margin-top:10px">Small version</h2>
+                              <p>Nunc pulvinar fermentum.</p>
+                         </a>
+                         <a href = "example4.html" class="item">
+                              <div style="float:left"><img src="images/preview/thumb4.jpg" /></div>
+                              <div class="number" style="float:left">4</div>
+                              <h2 class="white" style="margin-top:10px">Single image</h2>
+                              <p>Nunc pulvinar fermentum.</p>
+                         </a>
+                    </div>
+               </div>
+               <div class="sep10"></div>
+               <div class="sep30"></div>
+          </div>
+	</body>
+</html>

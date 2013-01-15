@@ -1,0 +1,363 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Expo 360º - The perfect way to show your products!</title>
+	
+	<meta name="description" content="Thank you for purchasing Expo360. If you have any questions that are beyond the scope of this help file feel free to use our support center at ticksy. Thanks so much!">
+	<meta name="author" content="plusquare">
+	<meta name="copyright" content="plusquare">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2012-06-17T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_8.jpg);}
+		a{color:#008C9E;}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ol{border-top:1px solid #212424;}
+		#documenter_sidebar ol a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ol a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ol a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#file_s_structure">File's Structure</a></li>
+			<li><a href="#setting_up_a_viewer">Setting up a viewer</a></li>
+			<li><a href="#costum_hotspots">Costum Hotspots</a></li>
+			<li><a href="#control_functions">Control functions</a></li>
+			<li><a href="#creating_a_set_of_photos">Creating a set of photos</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright plusquare 2012<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>Expo 360º</h1><h2>The perfect way to show your products!</h2><hr><ul><li>Created: 03/10/2011</li><li>latest Update: 06/17/2012</li><li>By: plusquare</li><li>Email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#112;&#108;&#117;&#115;&#113;&#117;&#97;&#114;&#101;&#46;&#112;&#116;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#112;&#108;&#117;&#115;&#113;&#117;&#97;&#114;&#101;&#46;&#112;&#116;</a></li></ul><p>Thank you for purchasing Expo360. If you have any questions that are beyond the scope of this help file feel free to use our support center at <a href="plusquare.ticksy.com">ticksy</a>. Thanks so much!</p></section><section id="file_s_structure">
+	<h3>File's Structure</h3><hr class="notop">
+<p>
+	Houdy, I&#39;ll start by explaining to you how the file is structured, what each part does and where you can costumize your 360&ordm; product viewer.</p>
+<p>
+	The application as you may now is done in javascript and using the jquery library v1.6.2 it also uses a <strong>configuration xml file</strong> which path you pass as argument when calling the script and a group of ui images that you can change accordingly as long as you <strong>maintain the same file names</strong>.</p>
+<p>&nbsp;
+	</p>
+<p>
+	You might be asking, <strong>why no css file?</strong></p>
+<p>
+	That&#39;s because all the css styles are applied directly through javascript so there isn&#39;t any interference between classes among css files from your website.</p>
+<p>&nbsp;
+	</p>
+<p>
+	And that&#39;s basically it for the structure. Let&#39;s start making your first product viewer :-)</p>
+<p>&nbsp;
+	</p>
+</section>
+<section id="setting_up_a_viewer">
+	<h3>Setting up a viewer</h3><hr class="notop">
+<p>
+	Here I&#39;ll explain how to set up a product viewer from nothing, so you can see what you need to include and have on your site.</p>
+<p>
+	Let&#39;s assume I have a blank html page like this:</p>
+<p>
+	<img alt="" src="assets/images/image_1.jpg"></p>
+<p>
+	and our project folder is like this:</p>
+<p>
+	<img alt="" src="assets/images/image_2.jpg"></p>
+<p>&nbsp;
+	</p>
+<h3>
+	Includes</h3>
+<p>
+	You start by copy paste the js folder and all it&#39;s contents from expo360 download package.</p>
+<p>
+	Now you need to include all the javascript needed for the file to work in your header. You need the following includes:</p>
+<pre class="brush: html">
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/libraries/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/libraries/jquery.mobile.vmouse.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/libraries/jquery.mousewheel.min.js&quot;&gt;&lt;/script&gt;   
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/pngFixer.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/Expo360.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	Being in order:</p>
+<ol>
+	<li>
+		jquery library</li>
+	<li>
+		jquery plugin for mouse wheel support</li>
+	<li>
+		used to fix png buttons&#39; images for IE</li>
+	<li>
+		used to create two images buttons</li>
+	<li>
+		the actual Expo 360 script that connects all together</li>
+</ol>
+<p>&nbsp;
+	</p>
+<p>
+	We know have something like this:</p>
+<p>
+	<img alt="" src="assets/images/image_3.jpg"></p>
+<p>&nbsp;
+	</p>
+<p>
+	Now you have all the libraries ans scripts needed for a clean run. <strong>What to do next?</strong></p>
+<p>&nbsp;
+	</p>
+<h3>
+	Configuration file</h3>
+<p>
+	Now you should define your configuration file where you have a lot of comments to guide you through.</p>
+<p>
+	What will this configuration file contain:</p>
+<ul>
+	<li>
+		Sizes for the different components</li>
+	<li>
+		Control panel controls</li>
+	<li>
+		Dozens of display options</li>
+	<li>
+		Single/List of images to use</li>
+</ul>
+<p>&nbsp;
+	</p>
+<h3>
+	Including the ui images</h3>
+<p>
+	You have to include the ui images used by the expo360, so copy paste the ui_images folder into your project</p>
+<p>&nbsp;
+	</p>
+<h3>
+	Calling the script</h3>
+<p>
+	Start by creating a div where the expo360 will place everything, associate an id with that div so we have something like this:</p>
+<p>
+	<img alt="" src="assets/images/image_4.jpg"></p>
+<p>
+	Now you just need to call the script giving it the configuration file path and the div where it should appear, this is code you need to add in the header:</p>
+<pre class="brush: js">
+&lt;script type=&quot;text/javascript&quot;&gt;
+jQuery(document).ready(function($) {
+   var expo = new Expo360({xml:&quot;configuration/settings.xml&quot;, where:&quot;#viewer&quot;});
+});
+&lt;/script&gt;</pre>
+<div>
+	&nbsp;</div>
+<p>
+	So you&#39;ll end with something like this:</p>
+<p>
+	<img alt="" src="assets/images/image_5.jpg"></p>
+<p>&nbsp;
+	</p>
+<p>
+	You should be able to see your progress now, with my configuration file I have something like this:</p>
+<p>
+	<img alt="" src="assets/images/image_6.jpg"></p>
+<p>&nbsp;
+	</p>
+<h3>
+	Adding the fonts used in the preview</h3>
+<p>
+	<strong>Note that the fonts used in the preview and in the examples are costum fonts are aren&#39;t still included</strong>, you can set other font like &#39;arial&#39; on the configuration file or you can import the fonts used.</p>
+<p>
+	To do this copy paste the css folder into your project and just include the fonts.css in the header like this:</p>
+<pre class="brush: html">
+&lt;link href=&quot;css/fonts.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</pre>
+<p>
+	You should have something like this in your html:</p>
+<p>
+	<img alt="" src="assets/images/image_7.jpg"></p>
+<p>&nbsp;
+	</p>
+<p>
+	You should now have a good notion of how to integrate this anywhere. Checkout the next chapter to see how you can make costum hotspots.</p>
+<p>&nbsp;
+	</p>
+</section>
+<section id="costum_hotspots">
+	<h3>Costum Hotspots</h3><hr class="notop">
+<p>
+	Here I&#39;ll tell you how you can create hotspots according to your site&#39;s style.</p>
+<p>
+	After having your viewer running (previous chapter), you can now start to costumize a bit more your viewer and add some hotspots to it. This is all done in the configuration xml file.</p>
+<p>
+	The configuration file has a lot of comments to guide you through but decided to give you a better understanding of how the hotspots work.</p>
+<p>&nbsp;
+	</p>
+<p>
+	You can create hotspots in any image you want from your image list, they will pop up when the users drags to that image.</p>
+<p>
+	There are 3 types of hotspots:</p>
+<ul>
+	<li>
+		<strong>link</strong> - the hotspot will be a simple link to anywhere you want</li>
+	<li>
+		<strong>small</strong> - will load a small window in front of the hotspot button</li>
+	<li>
+		<strong>big</strong> - loads an html/php file with the path you define with ajax</li>
+</ul>
+<p>&nbsp;
+	</p>
+<p>
+	Small and big types are the ones that need some special attention.</p>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>The small type</strong> will create a small window above the hotspot button, you can put any content you want, the elements you put are going to fetch the style defined in you page stylesheets.</p>
+<p>
+	So if you want to make a hotspots with just some text, you can do something like this:</p>
+<pre class="brush: html">
+</pre>
+<div>
+	<pre class="brush: html">
+&lt;html&gt;&lt;![CDATA[&lt;p&gt;Some small phrase&lt;/p&gt;]]&gt;&lt;/html&gt;</pre>
+</div>
+<p>
+	This text will have the style you have defined for the &#39;p&#39; tag in your site. If you don&#39;t have any stylesheet in your site for this, it will appear with the defaults browser&#39;s style.</p>
+<p>
+	All the content must be between the cdata tag: &nbsp;<span style="font-family: monospace; line-height: 19px; white-space: pre; ">&lt;![CDATA[ your content goes here </span>&nbsp;<span style="font-family: monospace; line-height: 19px; white-space: pre; ">]]&gt;</span></p>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>As to the big type</strong>, it will open the html file you set with ajax loaded directly into the product viewer&#39;s view, as in the small type, the styles must be associated already in your site or you can define new ones on the loaded html itself.</p>
+</section>
+<section id="control_functions">
+	<h3>Control functions</h3><hr class="notop">
+<p>
+	You have two control functions you can use to control the product viewer, supposing you have a button with id &#39;button&#39; and that your Expo360 object is named &#39;expo&#39;:</p>
+<ul>
+	<li>
+		goTo - rotates the object to the degree specified as parameter</li>
+</ul>
+<pre class="brush: js" style="margin-left: 40px; ">
+$(&quot;#button&quot;).click(function(){
+   expo.goTo(0);
+   return false;
+});</pre>
+<div>
+	&nbsp;</div>
+<ul>
+	<li>
+		zoomTo - zooms the object to the specified value as parameter (in this case to 2x)</li>
+</ul>
+<pre class="brush: js" style="margin-left: 40px; ">
+$(&quot;#button&quot;).click(function(){
+   expo.zoomTo(2);
+   return false;
+});</pre>
+<div>
+	&nbsp;</div>
+<p>
+	Have control functions requests? Drop us an email through our profile :)</p>
+</section>
+<section id="creating_a_set_of_photos">
+	<h3>Creating a set of photos</h3><hr class="notop">
+<p>
+	Regardless of how you want to create the photos needed for a full product spin, it will take some time and effort to get the required set. The more photos you use, the smoother the product spin looks. And ideal amount to use is between 24 and 36. Our demo uses 32, which ensures smooth spinning without too much data being transferred. There are several ways in which you might get the series of photos:</p>
+<p>&nbsp;
+	</p>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Create the photos yourself - the easy way</strong></p>
+<p>
+	This probably is the easiest way to get the required set of photos. This is also the way which we used to create the demo of the component. It&rsquo;s a bit messy, however it&rsquo;s cheap and also fast if you want to display just a single item.</p>
+<p>
+	All you need to do is to place a camera on a tripod and put a product on the table that you want to show on your website. Either you put the box in a lightbox or you can cut the product out of the photos later on. Here you can see the three steps we used to create the demo photos:</p>
+<p>&nbsp;
+	</p>
+<p>
+	<img alt="" src="assets/images/image_9.jpg"></p>
+<p>&nbsp;
+	</p>
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width:204px;">
+				<p align="center">
+					Raw photo, unedited &nbsp;</p>
+				<p align="center">
+					and uncut</p>
+			</td>
+			<td style="width:204px;">
+				<p align="center">
+					Color and contrast</p>
+				<p align="center">
+					corrected</p>
+			</td>
+			<td style="width:204px;">
+				<p align="center">
+					Camera cut out and background &nbsp;replaced &nbsp; &nbsp; &nbsp; &nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>&nbsp;
+	</p>
+<p>
+	&nbsp;<strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Create the photos yourself - the more professional way</strong></p>
+<p>
+	If you are planning on getting really serious with using product spins you might want to automate and professionalize a bit. In order to have a smooth product spin with exact angles, a turntable might help. If you search on &lsquo;360 turntable&rsquo; on Google, you&rsquo;ll get plenty of results. Companies like emeDigital (<a href="http://www.emedigital.co.uk/">http://www.emedigital.co.uk</a>) offer a wide variety of small and large hardware solutions for smooth spinning and good photos.</p>
+<p>
+	If you want to increase the quality of your product photos, there are several tutorials online (e.g. on Youtube) explaining how to set up an easy lightbox to create crisp and clean product photos. You can find an example here: <a href="http://www.youtube.com/watch?v=enK2hbSN6hQ">http://www.youtube.com/watch?v=enK2hbSN6hQ</a></p>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Photos by a professional photo studio</strong></p>
+<p>
+	This of course is one of the more expensive options, however, there are firms specialized in creating 360 spin photo series of your products. Searching Google will give you plenty of options here.</p>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Creating a set of 3D renderings</strong></p>
+<p>
+	When your product is a prototype, doesn&rsquo;t exist yet, is too difficult to actually turn on a turntable or you just think it&rsquo;s the best solution: create a 3D rendering of your product. This option will allow you to easily create the photos required without the use of a camera, studio and all other hardware required.</p>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>Do you have smarter solution that we can add to this little manual?</strong></p>
+<p>
+	<strong>Please do send us an e-mail through our profile!</strong></p>
+</section>
+
+	</div>
+</body>
+</html>
